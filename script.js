@@ -3,9 +3,18 @@
 // WINNING_COMBOS, checkWinner, getNextPlayer, applyMove, createInitialState
 // are provided by game.js, loaded before this script.
 
-const cells    = document.querySelectorAll('.cell');
-const status   = document.getElementById('status');
-const restartBtn     = document.getElementById('restart');
+const cells      = document.querySelectorAll('.cell');
+const status     = document.getElementById('status');
+const restartBtn = document.getElementById('restart');
+const scoreX     = document.getElementById('score-x');
+const scoreO     = document.getElementById('score-o');
+
+const score = { X: 0, O: 0 };
+
+function updateScoreboard() {
+  scoreX.textContent = score.X;
+  scoreO.textContent = score.O;
+}
 
 let state = createInitialState();
 
@@ -40,6 +49,8 @@ function handleClick(e) {
     state.gameOver = true;
     if (result.winner) {
       result.combo.forEach(i => cells[i].classList.add('winning'));
+      score[result.winner]++;
+      updateScoreboard();
       setStatus(`Player ${getPlayerSymbol(result.winner)} wins!`, 'win');
     } else {
       setStatus("It's a draw!", 'draw');
