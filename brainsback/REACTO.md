@@ -10,9 +10,12 @@ Estou trocando a forma de representação visual dos jogadores, em vez do cláss
 ## E — Examples
 _Exemplos_de_entrada_saída_ou_situacao_e_resposta_
 
-- **Input**: Aparece vez do 🐱, ao clicar uma célula, aparece 🐱 escolhida.
+- **Input**: Aparece vez do 🐱, ao clicar uma célula
 
-  **Output**: 🐶 preenche todas as células de uma fileira, aparece 🐶 ganhou.
+ **Output**: aparece 🐱 escolhida.
+
+- **Input**:🐶 preenche todas as células de uma fileira
+  **Output**: aparece 🐶 ganhou.
 
 - **Input**: qualquer um dos dois clica em new game
 
